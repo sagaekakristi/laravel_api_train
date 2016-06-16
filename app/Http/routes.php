@@ -15,7 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::auth();
+Route::post('oauth/access_token', 'OauthController@accessToken');
+
+// Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
